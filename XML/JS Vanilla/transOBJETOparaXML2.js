@@ -6,10 +6,24 @@ const text = "<bookstore><book>" +
 "<year>2005</year>" +
 "</book></bookstore>";
 
+const anotherText=
+`<feira>
+  <frutas>
+    -maçã
+    -uva
+    -morango
+  </frutas>
+  <legumes>
+    -batata
+  </legumes>
+</feira>`
 
-const xmlDoc = parser.parseFromString(text,"text/xml");
+// let objeto = "{nome: "laura", idade: 29, cidade: "Seropédica"}"
+
+
+const xmlDoc = parser.parseFromString(anotherText,"text/xml");
 
 document.getElementById("demo").innerHTML =
-xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+xmlDoc.getElementsByTagName("legumes")[0].childNodes[0].nodeValue;
 
 console.log(xmlDoc)
