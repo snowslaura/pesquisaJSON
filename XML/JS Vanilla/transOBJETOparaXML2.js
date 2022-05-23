@@ -18,12 +18,10 @@ const anotherText=
   </legumes>
 </feira>`
 
-// let objeto = "{nome: "laura", idade: 29, cidade: "Seropédica"}"
-
-
 const xmlDoc = parser.parseFromString(anotherText,"text/xml");
 
 document.getElementById("demo").innerHTML =
 xmlDoc.getElementsByTagName("legumes")[0].childNodes[0].nodeValue;
 
 console.log(xmlDoc)
+
